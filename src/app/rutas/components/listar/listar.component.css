@@ -1,0 +1,33 @@
+:host{
+    display: block;
+    margin: 20px;
+}
+
+#list-group{
+    margin: 20px;
+}
+
+.botones{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin:5px
+}
+
+#botonesOrden{
+    max-width: 200px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-right:10px;
+    
+}
+
+label{
+    width:90px;
+}
+#botonesOrden button{
+    margin: 5px;
+    justify-content: space-around;
+}

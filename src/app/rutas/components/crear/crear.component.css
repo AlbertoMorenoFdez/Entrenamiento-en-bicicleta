@@ -1,0 +1,11 @@
+:host{
+    display: block;
+    margin: 20px;
+}
+
+.form-inline{
+    padding:0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}

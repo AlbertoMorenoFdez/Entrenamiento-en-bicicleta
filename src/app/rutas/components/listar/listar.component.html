@@ -1,0 +1,56 @@
+<h4>Listado de rutas</h4>
+<label>Ordenar por:</label>
+
+
+<table class="botones">
+        <tr>
+                <td>
+                        <label>Distancia</label>
+                        <button class="btn btn-outline-primary" type="button" (click)="ordenarPorDistanciaMenor()"><i
+                                        class="fas fa-arrow-down"></i></button>
+                        <button class="btn btn-outline-primary" type="button" (click)="ordenarPorDistanciaMayor()"> <i
+                                        class="fas fa-arrow-up"></i></button>
+                </td>
+                <td style="width:10px"></td>
+                <td>
+                        <label>Nombre</label>
+                        <button class="btn btn-outline-primary" type="button" (click)="ordenarPorNombreMenor()"> <i
+                                        class="fas fa-arrow-down"></i></button>
+                        <button class="btn btn-outline-primary" type="button" (click)="ordenarPorNombreMayor()"> <i
+                                        class="fas fa-arrow-up"></i></button>
+                </td>
+        </tr>
+
+        <tr>
+                <td>
+                        <label>Duración</label>
+                        <button class="btn btn-outline-primary" type="button" (click)="ordernarPorDuracionMenor()"> <i
+                                        class="fas fa-arrow-down"></i></button>
+                        <button class="btn btn-outline-primary" type="button" (click)="ordenarPorDuracionMayor()"> <i
+                                        class="fas fa-arrow-up"></i></button>
+                </td>
+                <td style="width:10px"></td>
+                <td>
+                        <label>Fecha</label>
+                        <button class="btn btn-outline-primary" type="button" (click)="ordenarPorFechaMenor()"> <i
+                                        class="fas fa-arrow-down"></i></button>
+                        <button class="btn btn-outline-primary" type="button" (click)="ordenarPorFechaMayor()"> <i
+                                        class="fas fa-arrow-up"></i></button>
+                </td>
+        </tr>
+</table>
+<br>
+<ul class="list-group">
+        <li class="list-group-item" *ngFor="let ruta of rutas;
+  let i=index;">
+                <span class="text-primary">Ruta: {{i+1}}</span><br>
+                <strong>Nombre: </strong> <span>{{ruta.nombre}}</span><br>
+                <strong>Fecha: </strong> <span>{{ruta.fecha | date:'dd/MM/yyyy'}}</span><br>
+                <strong>Distancia: </strong> <span>{{ruta.distancia}} km.</span><br>
+                <strong>Duración: </strong> <span>{{ruta.horas}} horas: {{ruta.minutos}} minutos</span><br>
+
+                <input class="btn btn-danger" type="button" value="Eliminar" (click)="emitId(i)"> |
+                <input class="btn btn-warning" type="button" value="Editar" (click)="emitRuta(i,ruta)">
+
+        </li>
+</ul>
